@@ -8,4 +8,4 @@ github_username:  Yurikan4ik
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: none
