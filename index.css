@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    background: center top no-repeat;
+    text-shadow: 1px 1px 2px rgba(35, 31, 32, 0.5);
+
+    min-height: 100vh;
+}  
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5, h6 {
+    margin: 0;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url("https://kartinkin.net/uploads/posts/2020-09/1600185657_8-p-odnotonnie-foni-dlya-saita-9.jpg") center no-repeat;
+    background-size: cover;
+}
+.intro_title {
+    color: white;
+    font-size: 90px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.intro_title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 60px auto;
+    background-color: white;
+}
+.intro_inner {
+    color: white;
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+}
+.header {
+    width: 100%;
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.nav_link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s linear;
+    position: relative;
+}
+.nav_link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fce38a;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity 0.1s linear;
+}
+.nav_link:hover {
+    color: #fce38a;
+}
+.nav_link:hover:after {
+    opacity: 1;
+}
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    border: 3px solid white;
+    padding: 8px 30px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.about_main {
+    overflow: hidden;
+    padding: 345px 0 50px 0;
+    background: url("https://kartinkin.net/uploads/posts/2020-09/1600185657_8-p-odnotonnie-foni-dlya-saita-9.jpg") center no-repeat;
+    background-size: cover;
+}
+.about_us {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url("data:image/jpeg;base64,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"), url("https://kartinkin.net/uploads/posts/2020-09/1600185657_8-p-odnotonnie-foni-dlya-saita-9.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, center;
+    background-size: 55%, cover;
+
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+}
+.inner_container {
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 150px;
+}
+.inner_container h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+.text{
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background: #000;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+}
+footer div {
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+}
+footer nav a:hover {
+    border-bottom: 1px solid white;
+
+}
+@media screen and (max-width:1200px) {
+    .inner_container{
+        padding: 80px;
+    }
+}
+@media screen and (max-width:1000px) {
+    .about_us {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner_container{
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px) {
+    .about_us {
+        padding: 0;
+    }
+    .inner_container{
+        padding: 60px;
+    }
+}
